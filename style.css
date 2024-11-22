@@ -29,6 +29,11 @@ nav ul li a {
     padding: 8px 12px;
 }
 
+nav ul li a:hover {
+    background-color: #ff9900; /* Cambia el color de fondo */
+    color: #333; /* Cambia el color del texto */
+}
+
 main{
     display: flex;
     flex-direction: column;
