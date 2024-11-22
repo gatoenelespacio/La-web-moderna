@@ -4,42 +4,94 @@
     box-sizing: border-box;
 
 }
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;  
+
+nav{
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Fondo oscuro */
+    display: flex;
+    justify-content:space-between /* Espaciado entre logo y menú */
 }
 
-nav {
-    background-color: yellow;
-    padding: 10px;
-    display: in;
+nav ul {
+    list-style: none; /* Quita los puntos de lista */
+    display: flex; /* Flexbox para alinear elementos */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-nav ul li{
-    display: inline;
-    margin-right: 40px;
-}
-
-nav a { 
-    color: blue;
-    text-decoration: none;
-    padding: 8px 12px ;
-    display: inline-block;
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: white;
+    font-size: 1rem;
+    padding: 8px 12px;
 }
 
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
 }
 
-h1{
-    color: red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+/*contenido*/
+section{
+    margin: 20px;
+    padding: 20px;
+    background: #Ffff00;
+    border-radius: 10px;
+    width: 80%;
+}
+
+
+h2{
+    font-size: 40px;
+    color: #FF0000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+a{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    nav {
+        top: auto; /* Quita la posición superior */
+        bottom: 0; /* Fija la barra en la parte inferior */
+        flex-direction: column; /* Cambia la orientación a columna */
+        padding: 10px 0; /* Espaciado vertical */
+    }
+
+    nav ul {
+        flex-direction: column; /* Elementos en columna */
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espaciado entre elementos */
+    }
+
+    nav ul li a {
+        display: block; /* Asegura que ocupe toda la línea */
+        width: 100%; /* Botones más amplios */
+        text-align: center; /* Centra el texto */
+        background-color: #444; /* Fondo para botones */
+        color: white;
+        padding: 10px 0;
+    }
+
+    main {
+        margin-top: 0; /* Elimina el margen superior */
+        margin-bottom: 60px; /* Ajusta para evitar que el contenido quede detrás de la barra inferior */
+    }
 }
