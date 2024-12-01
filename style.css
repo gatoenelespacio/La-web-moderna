@@ -1,8 +1,16 @@
 * {
-    margin: 0;
+    margin: 0%;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: 0%;
+}
 
+body{
+    background-color: #c2c2c2;
+}
+
+h1{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav{
@@ -11,8 +19,8 @@ nav{
     left: 0;
     width: 100%;
     background-color: #333; /* Fondo oscuro */
-    display: flex;
-    justify-content:space-between /* Espaciado entre logo y menú */
+    justify-content:space-evenly /* Espaciado entre logo y menú */
+    
 }
 
 nav ul {
@@ -26,7 +34,7 @@ nav ul li a {
     text-decoration: none; /* Sin subrayado */
     color: white;
     font-size: 1rem;
-    padding: 8px 12px;
+    padding: 8px 12px
 }
 
 nav ul li a:hover {
@@ -42,34 +50,69 @@ main{
 }
 
 /*contenido*/
+img{
+    border-radius: 15px;
+    background-color: #ffff;
+
+}
 section{
     margin: 20px;
-    padding: 20px;
-    background: #Ffff00;
-    border-radius: 10px;
-    width: 80%;
+    padding: 40px;
+    background: #49c44f;
+    border-radius: 15px;
+    width: 40%;
+    height: auto;
 }
 
+.btn1,.btn2,.btn3,.btn4{
+    width: 30%;
+    height: auto;
+}
 
 h2{
     font-size: 40px;
     color: #FF0000;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
+    margin-top: 20px;
 }
 
 a{
-    text-align: center;
-    font-weight: bold;
     text-decoration: none;
+    color: black;
 }
 
-@media (max-width: 600px) {
+.HTML,.CSS,.javaScript,.HTTP{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    margin-top: 15px;
+    background-color: #f5f5DC;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 80px;
+    transition: all 0.3s ease;  
+}
+/*hover*/
+button:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: blue;
+}
+
+
+@media (max-width: 576px) {
     nav {
         top: auto; /* Quita la posición superior */
         bottom: 0; /* Fija la barra en la parte inferior */
@@ -90,7 +133,7 @@ a{
         display: block; /* Asegura que ocupe toda la línea */
         width: 100%; /* Botones más amplios */
         text-align: center; /* Centra el texto */
-        background-color: #444; /* Fondo para botones */
+        background-color: #af1c1c; /* Fondo para botones */
         color: white;
         padding: 10px 0;
     }
@@ -98,5 +141,54 @@ a{
     main {
         margin-top: 0; /* Elimina el margen superior */
         margin-bottom: 60px; /* Ajusta para evitar que el contenido quede detrás de la barra inferior */
+    }
+
+    .btn1,.btn2,.btn3,.btn4{
+        width: 60%;
+        height: 40%
+    }
+
+    section{
+        margin: 20px;
+        padding: 40px;
+        background: #49c44f;
+        border-radius: 15px;
+        width: 80%;
+    }
+    
+    h2{
+        color: brown;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    p{
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+}
+
+
+@media (min-width: 1025px) {
+    /* Ajustes para escritorios grandes */
+    body {
+        padding: 0 50px; /* Agrega margen lateral para pantallas grandes */
+    }
+
+    nav ul {
+        gap: 30px; /* Mayor espacio entre los elementos de navegación */
+    }
+
+    section h2 {
+        font-size: 28px; /* Títulos más grandes en pantallas grandes */
+    }
+
+    section p {
+        font-size: 18px; /* Texto más grande */
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px 25px;
     }
 }
